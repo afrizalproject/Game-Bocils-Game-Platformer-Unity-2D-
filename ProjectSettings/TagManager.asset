@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Environment
+  - Duri
+  - Goal
+  - Holy Water
+  - duri
+  - musuh
+  - goal
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - Ground
+  - Enemy
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 4286363751
+    locked: 0
+  - name: Foreground
+    uniqueID: 3383852211
+    locked: 0
+  - name: Object
+    uniqueID: 3725031215
+    locked: 0
+  - name: Character
+    uniqueID: 3056424693
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
