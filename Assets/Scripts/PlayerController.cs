@@ -115,7 +115,10 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }else if (collision.CompareTag("goal"))
         {
-            print("anjay menang");
+            if (GoalManager.singleton.canEnterFinish)
+            {
+                print("You Win");
+            }
         }
     }
 }

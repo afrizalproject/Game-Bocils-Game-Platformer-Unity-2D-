@@ -12,6 +12,7 @@ TagManager:
   - duri
   - musuh
   - goal
+  - huruf
   layers:
   - Default
   - TransparentFX
