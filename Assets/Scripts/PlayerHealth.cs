@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            PlayerController.singleton.anim.SetTrigger("dead");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         UIhealth[health].SetActive(false);
@@ -29,7 +30,8 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (collision.CompareTag("duri"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            PlayerController.singleton.anim.SetTrigger("dead");
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

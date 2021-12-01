@@ -8,8 +8,11 @@ public class EnemyHealth : MonoBehaviour
     public float health,maxHealth;
     public Image healthUI;
 
+    public Animator animenemy;
+
     private void Start()
     {
+        animenemy = GetComponent<Animator>();
         maxHealth = health;
     }
 
@@ -21,7 +24,8 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            animenemy.SetTrigger("enemy-dead");
+            Destroy(gameObject,0.5f);
         }
     }
 }

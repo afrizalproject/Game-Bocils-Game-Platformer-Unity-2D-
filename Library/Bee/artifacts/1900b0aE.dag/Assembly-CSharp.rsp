@@ -347,6 +347,7 @@
 "Assets/Scripts/EnemyHealth.cs"
 "Assets/Scripts/GoalManager.cs"
 "Assets/Scripts/GoalManajer.cs"
+"Assets/Scripts/Paralax.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/PlayerShoot.cs"
