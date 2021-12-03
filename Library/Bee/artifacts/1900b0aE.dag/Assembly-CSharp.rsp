@@ -351,6 +351,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/PlayerShoot.cs"
+"Assets/Scripts/sfxmanager.cs"
 -langversion:8.0
 
 /deterministic

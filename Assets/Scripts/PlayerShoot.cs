@@ -17,6 +17,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            sfxmanager.singleton.playSound(1);
             Instantiate(peluru, shotPoint.position, transform.rotation);
         }
     }

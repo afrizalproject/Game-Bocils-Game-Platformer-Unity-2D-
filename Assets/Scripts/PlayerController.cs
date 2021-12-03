@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
+            sfxmanager.singleton.playSound(0);
             rb.velocity = Vector2.up * jumpForce;
         }
 
@@ -110,6 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("huruf"))
         {
+            sfxmanager.singleton.playSound(2);
             GoalManager.singleton.CollectHuruf();
             scoreUI.text = GoalManager.singleton.hurufCollected.ToString()+"/28";
             Destroy(collision.gameObject);

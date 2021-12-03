@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            sfxmanager.singleton.playSound(3);
             animenemy.SetTrigger("enemy-dead");
             Destroy(gameObject,0.5f);
         }
