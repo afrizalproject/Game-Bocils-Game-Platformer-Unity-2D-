@@ -61,15 +61,16 @@
     <Compile Include="Assets\Scripts\GoalManajer.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
-    <Compile Include="Assets\loading.cs" />
+    <Compile Include="Assets\Scripts\loading.cs" />
     <Compile Include="Assets\Scripts\GoalManager.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\buttonmanager.cs" />
+    <Compile Include="Assets\Scripts\buttonmanager.cs" />
     <Compile Include="Assets\Scripts\Paralax.cs" />
     <Compile Include="Assets\Scripts\sfxmanager.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\PauseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/DASHBOARD.unity
+- path: Assets/Scenes/GAMEPLAY.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
