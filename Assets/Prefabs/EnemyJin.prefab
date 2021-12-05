@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 5927921176443608727}
   m_Layer: 8
   m_Name: EnemyJin
-  m_TagString: musuh
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,6 +324,7 @@ MonoBehaviour:
   health: 7
   maxHealth: 0
   healthUI: {fileID: 5927921176367438162}
+  animenemy: {fileID: 0}
 --- !u!1 &5927921176920665198
 GameObject:
   m_ObjectHideFlags: 0

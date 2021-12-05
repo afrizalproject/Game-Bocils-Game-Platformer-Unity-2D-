@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         singleton = this;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        scoreUI.text = "0" + "/28";
+        scoreUI.text = ":"+"0" + "/28";
     }
     // Start is called before the first frame update
     void Start()
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         {
             sfxmanager.singleton.playSound(2);
             GoalManager.singleton.CollectHuruf();
-            scoreUI.text = GoalManager.singleton.hurufCollected.ToString()+"/28";
+            scoreUI.text = ":"+GoalManager.singleton.hurufCollected.ToString()+"/28";
             Destroy(collision.gameObject);
         }else if (collision.CompareTag("goal"))
         {

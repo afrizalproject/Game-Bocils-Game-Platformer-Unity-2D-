@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7880490113355094540}
   m_Layer: 0
   m_Name: kaktus
-  m_TagString: Duri
+  m_TagString: duri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

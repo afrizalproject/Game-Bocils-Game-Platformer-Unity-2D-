@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyControllerDemon : MonoBehaviour
 {
     public static EnemyControllerDemon singleton; 
-    public Animator animDemon;
-    public bool tesanim;
+    Animator animDemon;
 
     private void Awake()
     {
@@ -48,15 +47,7 @@ public class EnemyControllerDemon : MonoBehaviour
                 isFacingRight = true;
             }
         }
-        if (tesanim)
-        {
-            animDemon.SetTrigger("demon-attack");
-        }
-        else
-        {
-            animDemon.SetTrigger("demon-idle");
-        }
-
+        StartCoroutine(enemyAnimasiCoroutine());
     }
 
     bool thereIsGround()
@@ -68,6 +59,12 @@ public class EnemyControllerDemon : MonoBehaviour
         Gizmos.DrawWireSphere(groundChecker.position, groundCheckerRadius);
     }
 
-
+    IEnumerator enemyAnimasiCoroutine()
+    {
+        yield return new WaitForSeconds(6);
+        animDemon.SetTrigger("demon-attack");
+        yield return new WaitForSeconds(6);
+        animDemon.SetTrigger("demon-idle");
+    }
 
 }

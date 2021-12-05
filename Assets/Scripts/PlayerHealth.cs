@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public GameObject[] UIhealth;
+    public GameObject warningUI;
 
     public void TakeDamage()
     {
@@ -28,7 +29,8 @@ public class PlayerHealth : MonoBehaviour
         {
             sfxmanager.singleton.playSound(4);
             TakeDamage();
-            PlayerController.singleton.anim.SetTrigger("hit");
+            warningUI.SetActive(true);
+            StartCoroutine(turnOffWarning());
         }
         else if (collision.CompareTag("duri"))
         {
@@ -36,5 +38,11 @@ public class PlayerHealth : MonoBehaviour
             PlayerController.singleton.anim.SetTrigger("dead");
            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    IEnumerator turnOffWarning()
+    {
+        yield return new WaitForSeconds(3);
+        warningUI.SetActive(false);
     }
 }
