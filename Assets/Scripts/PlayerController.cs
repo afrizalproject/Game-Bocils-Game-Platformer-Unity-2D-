@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
     //UI SCORE
     public Text scoreUI;
+    public Transform warningMusuh;
+    public GameObject UIWinner;
 
     private void Awake()
     {
@@ -65,11 +67,13 @@ public class PlayerController : MonoBehaviour
 
         if(move>0 && !isFacingRight)
         {
+            warningMusuh.localEulerAngles= Vector2.zero;
             transform.eulerAngles = Vector2.zero;
             isFacingRight = true;
         }
         else if(move<0 && isFacingRight)
         {
+            warningMusuh.localEulerAngles = Vector2.up * 180;
             transform.eulerAngles = Vector2.up*180;
             isFacingRight = false;
         }
@@ -119,7 +123,14 @@ public class PlayerController : MonoBehaviour
         {
             if (GoalManager.singleton.canEnterFinish)
             {
-                print("You Win");
+                backsoungGamePlay.singleton.audioMute = true;
+                backsoundWinner.singleton.audioMute = false;
+                UIWinner.SetActive(true);
+            }
+            else if(GoalManager.singleton.canEnterFinish==false)
+            {
+                GoalManager.singleton.warningScore.SetActive(true);
+                GoalManager.singleton.runCoroutine();
             }
         }
     }

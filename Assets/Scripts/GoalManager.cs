@@ -5,6 +5,7 @@ using UnityEngine;
 public class GoalManager : MonoBehaviour
 {
     public static GoalManager singleton;
+    public GameObject warningScore;
 
     public int hurufNeeded, hurufCollected;
     public bool canEnterFinish=false;
@@ -17,9 +18,22 @@ public class GoalManager : MonoBehaviour
     public void CollectHuruf()
     {
         hurufCollected++;
-        if (hurufCollected >= hurufNeeded)
+        if (hurufCollected == hurufNeeded)
         {
             canEnterFinish = true;
         }
     }
+
+    IEnumerator warningUITurnOff()
+    {
+        yield return new WaitForSeconds(5);
+        warningScore.SetActive(false);
+    }
+
+    public void runCoroutine()
+    {
+        StartCoroutine(warningUITurnOff());
+    }
+
+
 }

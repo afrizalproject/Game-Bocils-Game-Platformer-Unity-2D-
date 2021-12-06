@@ -8,16 +8,17 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public GameObject[] UIhealth;
     public GameObject warningUI;
+    public GameObject UIGameOver;
 
     public void TakeDamage()
     {
         health--;
         if (health <= 0)
         {
-            sfxmanager.singleton.playSound(5);
             health = 0;
             PlayerController.singleton.anim.SetTrigger("dead");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            sfxmanager.singleton.playSound(5);
+            StartCoroutine(GameOverCoroutine());
         }
         UIhealth[health].SetActive(false);
     }
@@ -36,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
         {
             sfxmanager.singleton.playSound(5);
             PlayerController.singleton.anim.SetTrigger("dead");
-           //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(GameOverCoroutine());
         }
     }
 
@@ -44,5 +45,12 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         warningUI.SetActive(false);
+    }
+
+    public IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(0);
+        Time.timeScale = 0;
+        UIGameOver.SetActive(true);
     }
 }

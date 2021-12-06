@@ -7,6 +7,7 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject panelPause;
     public GameObject panelControl;
+    public GameObject panelMission;
     public void pauseButton()
     {
         if (Time.timeScale == 1)
@@ -41,9 +42,15 @@ public class PauseManager : MonoBehaviour
         panelControl.SetActive(true);
     }
 
+    public void menuMission() {
+        panelPause.SetActive(false);
+        panelMission.SetActive(true);
+    }
+
     public void backToPanelPause()
     {
         panelPause.SetActive(true);
         panelControl.SetActive(false);
+        panelMission.SetActive(false);
     }
 }
