@@ -52,5 +52,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(0);
         Time.timeScale = 0;
         UIGameOver.SetActive(true);
+        backsoungGamePlay.singleton.audioMute = true;
     }
 }
